@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MycharacterList_20211005">
         <activity
+            android:name=".CharListActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
