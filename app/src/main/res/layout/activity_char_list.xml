@@ -7,9 +7,4 @@
     android:orientation="vertical"
     tools:context=".CharListActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="캐릭터 리스트 페이지"/>
-
 </LinearLayout>
