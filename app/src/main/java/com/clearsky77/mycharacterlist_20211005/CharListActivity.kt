@@ -16,5 +16,6 @@ class CharListActivity : AppCompatActivity() {
         charListViewPager.adapter = mvpa // xml에 어댑터를 얻는다
 
         charListTabLayout.setupWithViewPager(charListViewPager) // xml에 viewPager와 tabLayout연결
+
     }
 }
