@@ -14,5 +14,7 @@ class CharListActivity : AppCompatActivity() {
 
         mvpa = ImageViewPagerAdapter(supportFragmentManager) // 어댑터를 만들고
         charListViewPager.adapter = mvpa // xml에 어댑터를 얻는다
+
+        charListTabLayout.setupWithViewPager(charListViewPager) // xml에 viewPager와 tabLayout연결
     }
 }
