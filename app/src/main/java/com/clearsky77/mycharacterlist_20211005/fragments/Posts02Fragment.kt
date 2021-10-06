@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.clearsky77.mycharacterlist_20211005.R
-import kotlinx.android.synthetic.main.fragment_posts01.*
+import kotlinx.android.synthetic.main.fragment_posts02.*
 
 class Posts02Fragment : Fragment() {
     override fun onCreateView(
@@ -16,7 +16,7 @@ class Posts02Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_posts01, container, false)
+        return inflater.inflate(R.layout.fragment_posts02, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
