@@ -13,9 +13,15 @@ class CharListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_char_list)
 
         mvpa = ImageViewPagerAdapter(supportFragmentManager) // 어댑터를 만들고
-        charListViewPager.adapter = mvpa // xml에 어댑터를 얻는다
+        charListViewPager.adapter = mvpa // xml에 있는 charListViewPager에 어댑터를 얻는다
 
-        charListTabLayout.setupWithViewPager(charListViewPager) // xml에 viewPager와 tabLayout연결
+        // xml에 viewPager와 tabLayout연결
+        charListTabLayout.setupWithViewPager(charListViewPager)
+
+        // 탭에 이미지 얹기
+        charListTabLayout.getTabAt(0)?.setIcon(R.drawable.character01)
+        charListTabLayout.getTabAt(1)?.setIcon(R.drawable.character02)
+        charListTabLayout.getTabAt(2)?.setIcon(R.drawable.character03)
 
     }
 }

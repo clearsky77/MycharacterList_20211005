@@ -23,15 +23,4 @@ class ImageViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             return Posts03Fragment()
         }
     }
-
-    // 탭에 이름 표시
-    override fun getPageTitle(position: Int): CharSequence? {
-        if(position == 0) {
-            return "Arunyang"
-        }else if(position == 1){
-            return "Anyanya"
-        }else{
-            return "Bitnanun"
-        }
-    }
 }
