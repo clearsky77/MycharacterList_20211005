@@ -1,5 +1,7 @@
 package com.clearsky77.mycharacterlist_20211005.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +26,7 @@ class Posts01Fragment : Fragment() {
 //        postImg01.setOnClickListener {
 //            Toast.makeText(requireContext(), "postImg01.setOnClickListener", Toast.LENGTH_SHORT).show()
 //        }
+        // 화면에 이미지 표현
         val imgeURL = "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDlfMjQz%2FMDAxNjEyODY0NDY0OTEy.CyEmVaDiUjBLPASsOWz-1P-dpWh2GbXrtZggxsMRpBsg.9bNocgGaBJU1mFYm7D6PrNaN_TtU5y8dpU8DlsprWB8g.JPEG.dochi20%2F%25B9%25DF%25B7%25BB%25C6%25BC%25BF%25C2.jpg"
         Glide.with(this).load(imgeURL).into(postImg01)
         val imgeURL2 = "https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAyMTA3MTVfMjU4%2FMDAxNjI2MzI2MDYzNDkx.7UFt3Yyix-OK2XKL0ARLgwoXFn9snhC-ZAEzUgbRNzQg.hn0pu8hWaxGuDPF5UygE4lRFcACiPbU16SheITAN2UQg.PNG%2FIuL2i1ZtrntAnQgbE2Ko-bQ4bhts.jpg&type=sc960_832"
@@ -31,5 +34,21 @@ class Posts01Fragment : Fragment() {
         val imgeURL3 = "https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAxOTA0MDJfMTg1%2FMDAxNTU0MTg3NTY0ODIy.FYknc4fFRLPjehEACpb89a3aNbcpITfKx4uyQFC77d4g.rl2vAxnHfB_gnx3ezAOK8qvuzg08F6Vtch-9p-edCYQg.JPEG%2FITG636IM3VPsOdKSmYQmVFLS3aRs.jpg"
         Glide.with(this).load(imgeURL3).into(postImg03)
 
+        // 이미지 클릭시 이벤트 사이트로 이동 in 브라우저
+        postImg01.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW)
+            myIntent.data = Uri.parse("https://www.ff14.co.kr/news/event/view/355?category=2&page=5")
+            startActivity(myIntent)
+        }
+        postImg02.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW)
+            myIntent.data = Uri.parse("https://www.ff14.co.kr/news/event/view/316?category=2&page=11&next=317")
+            startActivity(myIntent)
+        }
+        postImg03.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW)
+            myIntent.data = Uri.parse("https://www.ff14.co.kr/news/event/view/305?category=2&page=13&next=317")
+            startActivity(myIntent)
+        }
     }
 }
