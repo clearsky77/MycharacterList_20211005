@@ -48,11 +48,20 @@ class CharListActivity : AppCompatActivity(), NavigationView.OnNavigationItemSel
 
     }
 
+    // 백버튼을 클릭하면 (드로워가 열린 상태에서 백버튼 -> 어플이 종료 방지)
+    override fun onBackPressed() {
+        if(layout_drawer.isDrawerOpen(GravityCompat.START)) { // 레이아웃 드로워가 열려있는가?
+            layout_drawer.closeDrawers() // 레이아웃 드로워를 닫아라
+        }else{
+            super.onBackPressed() // 기존 백버튼 기능 실행 (finish)
+        }
+    }
+
     //    네비게이션 메뉴의 아이템 선택 시 수행할 내용 지정
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.myInfo -> Toast.makeText(applicationContext, "내정보", Toast.LENGTH_SHORT).show()
-            R.id.friends -> Toast.makeText(applicationContext, "스케줄", Toast.LENGTH_SHORT).show()
+            R.id.friends -> Toast.makeText(applicationContext, "친구들", Toast.LENGTH_SHORT).show()
         }
         layout_drawer.closeDrawers() // 선택이 끝났으니 네비게이션 메뉴 창은 닫아줘야한다.
         return false
